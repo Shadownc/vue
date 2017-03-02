@@ -1,0 +1,229 @@
+html {
+	word-wrap: break-word;
+	word-break: break-all;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	font: "Microsoft Yahei", "PingFang SC", Helvetica, Arial, "Hiragino Sans GB", STHeiTi, sans-serif;
+	font-size: 62.5%;
+	padding-bottom: 44px;
+	background: #fff;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: middle;
+	-webkit-tap-highlight-color: transparent;
+	tap-highlight-color: transparent;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+ul,
+ol,
+li,
+dl {
+	list-style: none
+}
+
+address,
+cite,
+dfn,
+em,
+var,
+i {
+	font-style: normal
+}
+
+img {
+	vertical-align: top
+}
+
+input,
+select,
+textarea {
+	outline: 0;
+	box-shadow: none;
+	font-size: 14px;
+}
+
+body {
+	margin: 0 auto;
+	max-width: 640px;
+	min-width: 320px;
+	color: #333;
+	background: #fff;
+}
+
+a {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	text-decoration: none;
+	color: #333;
+}
+
+
+/*a:hover,a:active{-webkit-tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent;background-color:transparent;}*/
+
+input::-webkit-input-placeholder {
+	color: #999
+}
+
+input::-moz-placeholder {
+	color: #999
+}
+
+input::-ms-input-placeholder {
+	color: #999
+}
+
+dfn {
+	color: #999;
+}
+
+table {
+	border-collapse: collapse;
+	border: none;
+}
+
+button {
+	outline: none;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+*html .clearfix {
+	height: 1%;
+}
+
+*+html .clearfix {
+	height: 1%;
+}
+
+
+/*样式开始*/
+
+.msg {
+	padding: 0 10px;
+	width: 100%;
+}
+
+.cz {
+	width: 100%;
+	text-align: center;
+}
+
+.cz button {
+	padding: 10px 0;
+	display: inline-block;
+	width: 40%;
+	margin-right: 5px;
+	font-size: 1.4rem;
+	color: #fff;
+	background: #03a9f4;
+}
+
+.foot {
+	padding: 5px 0;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: -999;
+	border-top: 1px solid #d9d9d9;
+}
+
+.foot button {
+	margin: 0 auto;
+	padding: 10px 0;
+	display: block;
+	width: 80%;
+	font-size: 1.4rem;
+	color: #fff;
+	background: #03a9f4;
+}
+
+.page {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: #fff;
+}
+
+.page2 {
+	display: none;
+	position: absolute;
+	bottom: -100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: #fff;
+}
+
+.page ul {
+	width: 100%;
+}
+
+.page ul li,
+.page2 ul li {
+	display: flex;
+	padding: 10px 2%;
+	width: 100%;
+	border-top: 1px solid #ececec;
+}
+
+.page li label,
+.page2 li label {
+	display: inline-block;
+	width: 30%;
+	font-size: 1.6rem;
+	color: #333;
+}
+
+.page input,
+.page2 input {
+	display: inline-block;
+	width: 70%;
+	font-size: 1.6rem;
+	color: #333;
+}
+
+.page textarea {
+	width: 100%;
+	display: block;
+	border: 0;
+	resize: none;
+	color: inherit;
+	font-size: 1.6rem;
+	line-height: inherit;
+	outline: 0;
+}
+
+.page button,
+.page2 button {
+	margin: 0 auto;
+	padding: 10px 0;
+	display: block;
+	width: 80%;
+	font-size: 1.4rem;
+	color: #fff;
+	background: #03a9f4;
+}

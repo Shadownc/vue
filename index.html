@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no" />
+		<title>添加信息</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/vue.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<section>
+				<div class="msg">
+					<div id="list">
+						<dl v-for='msg in msgs'>
+							<dt>{{msg.name}}</dt>
+							<dd>{{msg.tel}}</dd>
+							<dd>{{msg.address}}</dd>
+						</dl>
+					</div>
+				</div>
+			</section>
+			<section class="foot">
+				<button id="btn" @click='add()'>添加地址</button>
+			</section>
+			<section class="page">
+				<ul>
+					<li><label>姓名</label><input type="text" placeholder="请输入您的姓名" name="name" required id="name" v-model='msg.name' /></li>
+					<li><label>联系电话</label><input type="text" name="tel" required placeholder="请输入您的联系方式" id="tel" v-model='msg.tel' /></li>
+					<li><textarea required placeholder="请输入具体地址" rows="3" name="address" id="address" v-model='msg.address'></textarea></li>
+				</ul>
+				<button id="save" @click='save()'>保存</button>
+			</section>
+			<section class="page2">
+				<ul>
+					<li><label>姓名</label><input type="text" id="changename" /></li>
+					<li><label>电话</label><input type="text" id="changetel" /></li>
+					<li><label>地址</label><input type="text" id="changeaddress" /></li>
+				</ul>
+				<button id="save-change">保存</button>
+			</section>
+		</div>
+
+		<script>
+			var vue = new Vue({
+				el: "#app",
+				data: {
+					msg: '',
+					msgs: [{
+						name: '小明',
+						tel: 15888888888,
+						address: "斗罗大陆"
+					}]
+				},
+				methods: {
+					add: function() {
+						$('.page').css("display", "block");
+						$('.page').animate({ left: "0" });
+					},
+					save: function() {
+
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

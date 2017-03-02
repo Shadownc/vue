@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/vue.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<dl v-for='msg in msgs'>
+				<dt>{{msg.name}}</dt>
+				<dd>{{msg.tel}}</dd>
+				<dd>{{msg.address}}</dd>
+			</dl>
+		</div>
+
+		<script>
+			var vue = new Vue({
+				el: '#app',
+				data: {
+					msgs: [{ name: '小明', tel: 15888888888, address: '斗罗大陆' }]
+				}
+			})
+		</script>
+	</body>
+
+</html>
