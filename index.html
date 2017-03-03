@@ -25,8 +25,8 @@
 							<dt>{{msg.name}}</dt>
 							<dd>{{msg.tel}}</dd>
 							<dd>{{msg.address}}</dd>
-							<button id="edit" @click='edit()'>编辑</button>
-							<button id="del" @click='del()'>删除</button>
+							<button id="edit" @click='edit(msg)'>编辑</button>
+							<button id="del" @click='del(msg)'>删除</button>
 						</dl>
 					</div>
 				</div>
@@ -53,7 +53,7 @@
 		</div>
 
 		<script>
-			var that = this;
+			//var that = this;
 			var vue = new Vue({
 				el: "#app",
 				data: {
@@ -83,8 +83,10 @@
 							this.msg = item;
 						}
 					},
-					del: function() {
+					del: function(item) {
+						if(item) {
 
+						}
 					},
 					change: function() {
 						$('.page2').animate({ bottom: "-100%" }, function() {
