@@ -2,14 +2,27 @@
 <html>
 
 	<head>
-		<meta charset="UTF-8">
+		<!--<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv="Cache-Control" content="no-cache">
 		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=no">
-		<meta name="format-detection" content="email=no" />
+		<meta name="format-detection" content="email=no" />-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app">
 		<title>添加信息</title>
 		<link rel="stylesheet" href="css/main.css" />
 		<script type="text/javascript" src="js/jquery.min.js"></script>
@@ -21,12 +34,12 @@
 			<section>
 				<div class="msg">
 					<div id="list">
-						<dl class="cz" v-for='msg in msgs'>
+						<dl class="cz" v-for='(msg,index) in msgs'>
 							<dt>{{msg.name}}</dt>
 							<dd>{{msg.tel}}</dd>
 							<dd>{{msg.address}}</dd>
 							<button id="edit" @click='edit(msg)'>编辑</button>
-							<button id="del" @click='del(msg)'>删除</button>
+							<button id="del" @click='del(index)'>删除</button>
 						</dl>
 					</div>
 				</div>
@@ -84,9 +97,8 @@
 						}
 					},
 					del: function(item) {
-						if(item) {
-
-						}
+						console.log(item);
+						this.msgs.splice(item, 1);
 					},
 					change: function() {
 						$('.page2').animate({ bottom: "-100%" }, function() {
